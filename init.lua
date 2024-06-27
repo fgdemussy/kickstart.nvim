@@ -89,6 +89,11 @@ vim.cmd 'set tabstop=2'
 vim.cmd 'set softtabstop=2'
 vim.cmd 'set shiftwidth=2'
 
+-- nvim-tree
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -883,7 +888,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
-  require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.nvim-tree',
   require 'kickstart.plugins.lualine',
   require 'kickstart.plugins.alpha',
   require 'kickstart.plugins.github_copilot',
