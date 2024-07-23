@@ -184,9 +184,12 @@ vim.api.nvim_set_keymap('n', 'th', ':bprev<enter>', { noremap = false })
 vim.api.nvim_set_keymap('n', 'tl', ':bnext<enter>', { noremap = false })
 vim.api.nvim_set_keymap('n', 'td', ':bdelete<enter>', { noremap = false })
 
--- Files
+-- Motion
 vim.api.nvim_set_keymap('n', 'E', '$', { noremap = false })
 vim.api.nvim_set_keymap('n', 'B', '^', { noremap = false })
+
+-- Files
+vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', { noremap = false })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -871,6 +874,15 @@ require('lazy').setup({
         additional_vim_regex_highlighting = { 'ruby' },
       },
       indent = { enable = true, disable = { 'ruby' } },
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = 'gnn',
+          node_incremental = 'grn',
+          scope_incremental = 'grc',
+          node_decremental = 'grm',
+        },
+      },
     },
     config = function(_, opts)
       -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
