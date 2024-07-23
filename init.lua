@@ -184,6 +184,10 @@ vim.api.nvim_set_keymap('n', 'th', ':bprev<enter>', { noremap = false })
 vim.api.nvim_set_keymap('n', 'tl', ':bnext<enter>', { noremap = false })
 vim.api.nvim_set_keymap('n', 'td', ':bdelete<enter>', { noremap = false })
 
+-- Files
+vim.api.nvim_set_keymap('n', 'E', '$', { noremap = false })
+vim.api.nvim_set_keymap('n', 'B', '^', { noremap = false })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
