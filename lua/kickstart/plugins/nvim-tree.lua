@@ -26,6 +26,6 @@ return {
         side = 'right',
       },
     }
-    vim.keymap.set('n', '<leader>e', ':NvimTreeFindFile<CR>', { desc = '[b] Open tree', noremap = true })
+    vim.keymap.set('n', '<leader>m', ':NvimTreeFindFile<CR>', { desc = '[b] Open tree', noremap = true })
   end,
 }
