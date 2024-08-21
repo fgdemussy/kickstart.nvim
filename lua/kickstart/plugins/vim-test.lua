@@ -9,4 +9,5 @@ return {
   vim.keymap.set('n', '<leader>tl', ':TestLast<CR>', { desc = 'Test last' }),
   vim.keymap.set('n', '<leader>tg', ':TestVisit<CR>', { desc = 'Test visit' }),
   vim.cmd 'let test#strategy = "vimux"',
+  -- vim.cmd 'let g:test#echo_command = 0',
 }
